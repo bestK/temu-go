@@ -26,7 +26,7 @@ type ParentOrderMap struct {
 	ParentOrderTime              int64     `json:"parentOrderTime"`              // 订单创建时间
 	ParentOrderPendingFinishTime int64     `json:"parentOrderPendingFinishTime"` // 订单结束pending转为自发货时间
 	ExpectShipLatestTime         int64     `json:"expectShipLatestTime"`         // 要求最晚发货时间
-	ParentShippingTime           int64     `json:"parentShippingTime"`           // 父单发货时间
+	ParentShippingTime           null.Int  `json:"parentShippingTime"`           // 父单发货时间
 	UpdateTime                   int64     `json:"updateTime"`                   // 订单更新时间（秒级时间戳）
 	LatestDeliveryTime           int64     `json:"latestDeliveryTime"`           // 最后发货时间
 	FulfillmentWarning           []string  `json:"fulfillmentWarning"`           // 履约相关提醒: SUGGEST_SIGNATURE_ON_DELIVERY-建议发货时购买签名服务
